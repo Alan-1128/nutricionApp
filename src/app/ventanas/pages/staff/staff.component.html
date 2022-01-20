@@ -1,0 +1,24 @@
+
+<div class="header">
+    <div class="img-wrapper">
+        <img src="../../../../assets/pexels-fauxels-3184418.jpg">
+    </div>
+    <div class="banner">
+        <h2 class="h2-2">PERSONAL</h2>
+    </div>
+</div>
+
+<div class="fichas-center">
+    <div class="cards-wrapper">
+        <div class="card" data-tilt *ngFor="let item of informacion">
+            <div class="card-img-wrapper">
+                <img src="{{item.img}}" alt="CEO">
+            </div>
+            <div class="card-information">
+                <h2>{{item.nombre}}</h2>
+                <h3>{{item.cargo}}</h3>
+                <p>{{item.descripcion}}</p>
+            </div>
+        </div>
+    </div>
+</div>

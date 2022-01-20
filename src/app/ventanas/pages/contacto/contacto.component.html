@@ -1,0 +1,52 @@
+<div class="header">
+    <div class="img-wrapper">
+        <img src="../../../../assets/pexels-pixabay-263564-compressed.jpg">
+    </div>
+    <div class="banner">
+        <h2 class="h2-2">CONTACTO</h2>
+    </div>
+</div>
+
+
+
+
+
+
+<main>
+    <section class="login">
+        <div class="container-login">
+            <form autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="guardar()">
+                <h2 class="h2" >Contacto</h2>
+
+                <input type="name" 
+                       placeholder="Nombre(s):"
+                       formControlName="nombre">
+                <span class="text-danger"
+                      *ngIf="validacion('nombre')">
+                  Debe de ser más de 3 letras
+                </span>
+
+                <input type="email" 
+                       placeholder="Correo electrónico:"
+                       formControlName="correo">
+                <span class="text-danger"
+                      *ngIf="validacion('correo')">
+                  Debe de ser mayor de 5 caracteres
+                </span>
+                <input type="text" 
+                       placeholder="Mensaje......"
+                       class="mensaje"
+                       formControlName="mensaje">
+                <span class="text-danger"
+                      *ngIf="miFormulario.controls.mensaje.errors && miFormulario.controls.mensaje.touched">
+                  Debe de ser mayor de 5 caracteres
+                </span>
+
+                <button type="submit" class="boton">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+

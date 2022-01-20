@@ -1,0 +1,30 @@
+
+<div class="container" (click)="abrir()">
+    <div class="top-menu container" >
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+    
+    <section class="sidebar">
+        <ul class="menu">
+            <li class="menu-item">
+                <a class="menu-link" 
+                   data-content="Inicio"
+                   routerLink="inicio">Inicio</a>
+            </li>
+            <hr>
+            <li class="menu-item">
+                <a class="menu-link pointer" 
+                    data-content="Personal"
+                    routerLink="ventana">Personal</a>
+            </li>
+            <hr>
+            <li class="menu-item">
+                <a class="menu-link" 
+                   data-content="Contacto"
+                   routerLink="ventana/contacto">Contacto</a>
+            </li>
+        </ul>
+    </section>
+</div>
